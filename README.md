@@ -1,20 +1,23 @@
 # ros2-test
 
-ubuntu 20.4 X64
-Make sure you install  ros2 usb_cam package with ROS 2 distro installed 
+Installing the usb_cam Package:
+Ensure that you install the usb_cam package for your ROS 2 distribution using the following command:
 sudo apt-get install ros-humble-usb-cam
-if you install with Building from Source 
-    there should be some error
-    
-In my system usb_cam package dont work with laptop cam 
-I use external camera
-##run the node
+If you try to install it by building from source, you might encounter some errors.
 
-##Publish an image
- ros2 run usb_cam usb_cam_node_exe
+Camera Compatibility:
+On my system, the usb_cam package doesn't work with the built-in laptop camera, so I use an external camera instead.
 
-##change the mode
-  ros2 service call /set_mode std_srvs/srv/SetBool "{data: true}"  # Grayscale mode
-  ros2 service call /set_mode std_srvs/srv/SetBool "{data: false}" # Color mode
+Running the Node:
+To publish an image from the external camera, use this command:
+ros2 run usb_cam usb_cam_node_exe
+Changing Camera Mode:
+You can toggle between grayscale and color modes using the following commands:
 
+Grayscale mode:
+ros2 service call /set_mode std_srvs/srv/SetBool "{data: true}"
+Color mode:
+ros2 service call /set_mode std_srvs/srv/SetBool "{data: false}"
+Viewing the Image:
+To view the published images, use the following command:
 ros2 run rqt_image_view rqt_image_view
