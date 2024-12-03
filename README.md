@@ -3,12 +3,13 @@
 ubantu 24.4
 ros-jazzy
 
-Running the Node:
+## Running the Node:
 
 ros2 launch image_conversion_cpp image_conversion
-To publish an image from the camera, use this command:
-ros2 run usb_cam usb_cam_node_exe
-Changing Camera Mode:
+
+## To publish an image from the camera, use this command:
+ros2 run usb_cam usb_cam_node_exe  .
+## Changing Camera Mode:
 You can toggle between grayscale and color modes using the following commands:
 
 Grayscale mode:
