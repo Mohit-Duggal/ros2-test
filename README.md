@@ -1,14 +1,11 @@
 # ros2-test
 
-Installing the usb_cam Package:
-Ensure that you install the usb_cam package for your ROS 2 distribution using the following command:
-sudo apt-get install ros-humble-usb-cam
-If you try to install it by building from source, you might encounter some errors.
-
-Camera Compatibility:
-On my system, the usb_cam package doesn't work with the built-in laptop camera, so I use an external camera instead.
+ubantu 24.4
+ros-jazzy
 
 Running the Node:
+
+ros2 launch image_conversion_cpp image_conversion
 To publish an image from the external camera, use this command:
 ros2 run usb_cam usb_cam_node_exe
 Changing Camera Mode:
